@@ -109,7 +109,7 @@ jobs:
           sudo -E systemctl daemon-reload
           sudo -E timedatectl set-timezone "Asia/Shanghai"
 
-#          sudo chown $USER:$GROUPS $GITHUB_WORKSPACE
+          # sudo chown $USER:$GROUPS $GITHUB_WORKSPACE
           sudo mkdir -p /mnt/build_wrt
           sudo chown $USER:$USER /mnt/build_wrt
           sudo ln -s /mnt/build_wrt $GITHUB_WORKSPACE/wrt
@@ -133,7 +133,7 @@ jobs:
           echo "WRT_MARK=${GITHUB_REPOSITORY%%/*}" >> $GITHUB_ENV
           echo "WRT_INFO=${WRT_SOURCE%%/*}" >> $GITHUB_ENV
           echo "WRT_TARGET=$(grep -m 1 -oP '^CONFIG_TARGET_\K[\w]+(?=\=y)' ./Config/$WRT_CONFIG.txt)" >> $GITHUB_ENV
-#          echo "WRT_WIFI=wifi-yes" >> $GITHUB_ENV
+          # echo "WRT_WIFI=wifi-yes" >> $GITHUB_ENV
           echo "WRT_KVER=none" >> $GITHUB_ENV
           echo "WRT_LIST=none" >> $GITHUB_ENV
 
@@ -245,12 +245,12 @@ jobs:
           . $GITHUB_WORKSPACE/Scripts/function.sh
           cd ./wrt/
 
-# tb 的 generate_config 方法已处理
-#          if [[ "${WRT_CONFIG,,}" == *"test"* ]]; then
-#            cat $GITHUB_WORKSPACE/Config/$WRT_CONFIG.txt >> .config
-#          else
-#            cat $GITHUB_WORKSPACE/Config/$WRT_CONFIG.txt $GITHUB_WORKSPACE/Config/GENERAL.txt >> .config
-#          fi
+          # tb 的 generate_config 方法已处理
+          # if [[ "${WRT_CONFIG,,}" == *"test"* ]]; then
+          #   cat $GITHUB_WORKSPACE/Config/$WRT_CONFIG.txt >> .config
+          # else
+          #   cat $GITHUB_WORKSPACE/Config/$WRT_CONFIG.txt $GITHUB_WORKSPACE/Config/GENERAL.txt >> .config
+          # fi
           generate_config && cat .config
 
           $GITHUB_WORKSPACE/Scripts/Settings.sh
@@ -323,7 +323,7 @@ jobs:
             for FILE in $(find ./bin/targets/ -type f -iname "*$WRT_TARGET*") ; do
               EXT=$(basename $FILE | cut -d '.' -f 2-)
               NAME=$(basename $FILE | cut -d '.' -f 1 | grep -io "\($WRT_TARGET\).*")
-              # NEW_FILE="$NAME"-"$WRT_INFO"-"$WRT_BRANCH"-"$WRT_WIFI"-"$WRT_DATE"."$EXT"
+          # NEW_FILE="$NAME"-"$WRT_INFO"-"$WRT_BRANCH"-"$WRT_WIFI"-"$WRT_DATE"."$EXT"
               NEW_FILE="$NAME"-"$WRT_DATE"."$EXT"
               mv -f $FILE ./upload/$NEW_FILE
             done
