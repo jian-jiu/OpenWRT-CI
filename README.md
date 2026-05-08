@@ -8,28 +8,6 @@ https://github.com/immortalwrt/immortalwrt.git
 
 https://github.com/VIKINGYFY/immortalwrt.git
 
-# U-BOOT
-
-高通版-沉心：
-
-https://github.com/chenxin527/uboot-ipq60xx-emmc-build.git
-
-https://github.com/chenxin527/uboot-ipq60xx-nand-build.git
-
-https://github.com/chenxin527/uboot-ipq60xx-nor-build.git
-
-高通版-小猪：
-
-https://github.com/1980490718/u-boot-2016.git
-
-联发科-全新版：
-
-https://github.com/VIKINGYFY/UBOOT-CI/releases
-
-联发科-官方版：
-
-https://drive.wrt.moe/uboot/mediatek
-
 # 固件简要说明
 
 固件每天早上5点自动编译。
@@ -46,5 +24,6 @@ Scripts——自定义脚本
 
 Config——自定义配置
 
-#
-[![Stargazers over time](https://starchart.cc/VIKINGYFY/OpenWRT-CI.svg?variant=adaptive)](https://starchart.cc/VIKINGYFY/OpenWRT-CI)
+# 修改 (自用)
+Update Settings.sh GHNERCH* 2026/5/5 15:01
+[开启内核eBPF](https://github.com/GHNERCH/OpenWRT-CI)

@@ -4,11 +4,18 @@
 name: Auto-Clean
 
 on:
-  #自动清理：每天早上5点
-  schedule:
-    - cron: 0 21 * * *
+  #自动编译：当cache-Clean运行完成后
+  workflow_run:
+    workflows: ["Cache-Clean"]
+    types:
+      - completed
   #手动清理
   workflow_dispatch:
+    inputs:
+      NUMBER:
+        default: '8'
+        required: false
+        type: string
 
 permissions: write-all
 
@@ -21,7 +28,7 @@ jobs:
         with:
           gh_token: ${{secrets.GITHUB_TOKEN}}
           delete_releases: true
-          releases_keep_latest: 0
+          releases_keep_latest: ${{inputs.NUMBER || '0'}}
           delete_tags: true
           delete_workflows: true
           workflows_keep_day: 0
