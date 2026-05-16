@@ -89,7 +89,8 @@ UPDATE_PACKAGE "luci-app-dae" "QiuSimons/luci-app-dae" "kix"
 UPDATE_PACKAGE "luci-app-daed" "QiuSimons/luci-app-daed" "kix"
 UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
 #UPDATE_PACKAGE "luci-app-lucky" "sirpdboy/luci-app-lucky" "main"
-#UPDATE_PACKAGE "luci-app-lanspeed" "qimaoww/luci-app-lanspeed" "main"
+UPDATE_PACKAGE "luci-app-lanspeed" "qimaoww/luci-app-lanspeed" "master"
+UPDATE_PACKAGE "destan19" "destan19/OpenAppFilter" "master" "" "luci-app-oaf oaf open-app-filter"
 
 #更新软件包版本
 UPDATE_VERSION() {
