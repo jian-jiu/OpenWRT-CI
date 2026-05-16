@@ -1,16 +1,21 @@
 # docker
-# CONFIG_PACKAGE_luci-app-docker=y
 CONFIG_PACKAGE_luci-app-dockerman=y
 CONFIG_PACKAGE_kmod-ip6tables=y
-# CONFIG_PACKAGE_kmod-nft-compat=y
-# CONFIG_PACKAGE_kmod-ipt-core=y
 CONFIG_PACKAGE_kmod-ipt-extra=y
 CONFIG_PACKAGE_kmod-ipt-nat=y
 CONFIG_PACKAGE_kmod-ipt-nat6=y
 CONFIG_PACKAGE_kmod-ipt-physdev=y
 CONFIG_PACKAGE_kmod-nf-ipvs=y
+# 下面可以不要
+# CONFIG_PACKAGE_luci-app-docker=y
+# CONFIG_PACKAGE_kmod-nft-compat=y
+# CONFIG_PACKAGE_kmod-ipt-core=y
 # CONFIG_PACKAGE_kmod-ipt-fullconenat=y
 # CONFIG_PACKAGE_kmod-ipt-conntrack=y
+
+CONFIG_PACKAGE_lanspeedd=y
+CONFIG_PACKAGE_lanspeedd-bpf=y
+CONFIG_PACKAGE_luci-app-lanspeed=y
 
 #科学插件调整
 CONFIG_PACKAGE_luci-app-dae=y

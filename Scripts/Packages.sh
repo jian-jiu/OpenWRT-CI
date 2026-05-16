@@ -47,7 +47,7 @@ UPDATE_PACKAGE() {
 # UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-appfilter oaf" 这样会把原有的open-app-filter，luci-app-appfilter，oaf相关组件删除，不会出现coremark错误。
 
 # UPDATE_PACKAGE "包名" "项目地址" "项目分支" "pkg/name，可选，pkg为从大杂烩中单独提取包名插件；name为重命名为包名"
-UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-25.12"
+#UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-25.12"
 #UPDATE_PACKAGE "aurora" "eamonxg/luci-theme-aurora" "master"
 #UPDATE_PACKAGE "aurora-config" "eamonxg/luci-app-aurora-config" "master"
 #UPDATE_PACKAGE "kucat" "sirpdboy/luci-theme-kucat" "master"
@@ -89,6 +89,7 @@ UPDATE_PACKAGE "luci-app-dae" "QiuSimons/luci-app-dae" "kix"
 UPDATE_PACKAGE "luci-app-daed" "QiuSimons/luci-app-daed" "kix"
 UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
 #UPDATE_PACKAGE "luci-app-lucky" "sirpdboy/luci-app-lucky" "main"
+#UPDATE_PACKAGE "luci-app-lanspeed" "qimaoww/luci-app-lanspeed" "main"
 
 #更新软件包版本
 UPDATE_VERSION() {
