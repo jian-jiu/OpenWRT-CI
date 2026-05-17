@@ -1,6 +1,4 @@
 #!/bin/bash
-# SPDX-License-Identifier: MIT
-# Copyright (C) 2026 VIKINGYFY
 
 #安装和更新软件包
 UPDATE_PACKAGE() {
@@ -75,13 +73,13 @@ UPDATE_PACKAGE "netspeedtest" "sirpdboy/netspeedtest" "main" "" "homebox ookla-s
 # 网络设置向导
 #UPDATE_PACKAGE "netwizard" "sirpdboy/luci-app-netwizard" "main"
 UPDATE_PACKAGE "openlist2" "sbwml/luci-app-openlist2" "main"
-UPDATE_PACKAGE "partexp" "sirpdboy/luci-app-partexp" "main"
+# UPDATE_PACKAGE "partexp" "sirpdboy/luci-app-partexp" "main"
 #UPDATE_PACKAGE "qbittorrent" "sbwml/luci-app-qbittorrent" "master" "" "qt6base qt6tools rblibtorrent"
 #UPDATE_PACKAGE "qmodem" "FUjr/QModem" "main"
 UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 #UPDATE_PACKAGE "timecontrol" "sirpdboy/luci-app-timecontrol" "main"
 #UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "gecoosac luci-app-timewol luci-app-wolplus"
-UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-wolplus"
+# UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-wolplus"
 #UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 #UPDATE_PACKAGE "vnt2" "lmq8267/luci-app-vnt2" "main"
 
@@ -91,6 +89,7 @@ UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
 #UPDATE_PACKAGE "luci-app-lucky" "sirpdboy/luci-app-lucky" "main"
 UPDATE_PACKAGE "luci-app-lanspeed" "qimaoww/luci-app-lanspeed" "master"
 UPDATE_PACKAGE "destan19" "destan19/OpenAppFilter" "master" "" "luci-app-oaf oaf open-app-filter"
+UPDATE_PACKAGE "Lienol" "Lienol/openwrt-package" "main" "" "luci-app-fileassistant"
 
 #更新软件包版本
 UPDATE_VERSION() {

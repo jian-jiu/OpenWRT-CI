@@ -1,11 +1,11 @@
 # docker
-CONFIG_PACKAGE_luci-app-dockerman=y
-CONFIG_PACKAGE_kmod-ip6tables=y
-CONFIG_PACKAGE_kmod-ipt-extra=y
-CONFIG_PACKAGE_kmod-ipt-nat=y
-CONFIG_PACKAGE_kmod-ipt-nat6=y
-CONFIG_PACKAGE_kmod-ipt-physdev=y
-CONFIG_PACKAGE_kmod-nf-ipvs=y
+# CONFIG_PACKAGE_luci-app-dockerman=y
+# CONFIG_PACKAGE_kmod-ip6tables=y
+# CONFIG_PACKAGE_kmod-ipt-extra=y
+# CONFIG_PACKAGE_kmod-ipt-nat=y
+# CONFIG_PACKAGE_kmod-ipt-nat6=y
+# CONFIG_PACKAGE_kmod-ipt-physdev=y
+# CONFIG_PACKAGE_kmod-nf-ipvs=y
 # 下面可以不要
 # CONFIG_PACKAGE_luci-app-docker=y
 # CONFIG_PACKAGE_kmod-nft-compat=y
@@ -21,6 +21,8 @@ CONFIG_PACKAGE_oaf=y
 CONFIG_PACKAGE_open-app-filter=y
 CONFIG_PACKAGE_luci-app-oaf=y
 
+CONFIG_PACKAGE_luci-app-fileassistant=y
+
 #科学插件调整
 CONFIG_PACKAGE_luci-app-dae=y
 CONFIG_PACKAGE_luci-app-daed=y
@@ -28,7 +30,7 @@ CONFIG_PACKAGE_luci-app-daed=y
 CONFIG_PACKAGE_luci-app-openclash=y
 #增加插件
 
-# CONFIG_PACKAGE_luci-app-netspeedtest=y
+CONFIG_PACKAGE_luci-app-netspeedtest=y
 CONFIG_PACKAGE_luci-app-openlist2=y
 # CONFIG_PACKAGE_luci-app-tailscale=y
 # CONFIG_PACKAGE_luci-app-easytier=y
@@ -44,10 +46,10 @@ CONFIG_PACKAGE_luci-app-pushbot=y
 CONFIG_PACKAGE_luci-app-autoreboot=y
 # CONFIG_PACKAGE_luci-app-gecoosac=y
 CONFIG_PACKAGE_luci-app-mini-diskmanager=y
-CONFIG_PACKAGE_luci-app-partexp=y
-CONFIG_PACKAGE_luci-app-samba4=y
+## CONFIG_PACKAGE_luci-app-partexp=y
+## CONFIG_PACKAGE_luci-app-samba4=y
 CONFIG_PACKAGE_luci-app-upnp=y
-CONFIG_PACKAGE_luci-app-wolplus=y
+## CONFIG_PACKAGE_luci-app-wolplus=y
 #USBnet-iPhoneSupport
 #CONFIG_PACKAGE_usbmuxd=y
 ## CONFIG_PACKAGE_luci-theme-aurora=y
