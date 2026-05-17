@@ -30,7 +30,8 @@ CONFIG_PACKAGE_luci-app-daed=y
 CONFIG_PACKAGE_luci-app-openclash=y
 #增加插件
 
-CONFIG_PACKAGE_luci-app-netspeedtest=y
+# 错误 python3-email python3-pkg-resources
+### CONFIG_PACKAGE_luci-app-netspeedtest=y
 CONFIG_PACKAGE_luci-app-openlist2=y
 # CONFIG_PACKAGE_luci-app-tailscale=y
 # CONFIG_PACKAGE_luci-app-easytier=y
