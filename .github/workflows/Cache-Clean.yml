@@ -4,7 +4,7 @@
 name: Cache-Clean
 
 on:
-  schedule:
+#  schedule:
     #每周一4:00
 #    - cron: 0 20 * * 0
     #每天4:00
