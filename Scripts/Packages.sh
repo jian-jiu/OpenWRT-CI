@@ -83,7 +83,7 @@ UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 #UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 #UPDATE_PACKAGE "vnt2" "lmq8267/luci-app-vnt2" "main"
 
-UPDATE_PACKAGE "luci-app-dae" "QiuSimons/luci-app-dae" "kix"
+#UPDATE_PACKAGE "luci-app-dae" "QiuSimons/luci-app-dae" "kix"
 UPDATE_PACKAGE "luci-app-daed" "QiuSimons/luci-app-daed" "kix"
 #UPDATE_PACKAGE "luci-app-daed" "breeze303/luci-app-daed" "kix"
 UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
@@ -140,3 +140,11 @@ UPDATE_VERSION "sing-box"
 if [ -f "$GITHUB_WORKSPACE/Scripts/PRIVATE.sh" ]; then
 	source "$GITHUB_WORKSPACE/Scripts/PRIVATE.sh"
 fi
+
+#修复daed/Makefile
+#rm -rf luci-app-daed/daed/Makefile && cp -r $GITHUB_WORKSPACE/patches/daed/Makefile luci-app-daed/daed/
+sed -i 's/pnpm install ; \\/pnpm install --no-frozen-lockfile ; \\/g' luci-app-daed/daed/Makefile
+sed -i 's|github.com/daeuniverse/quic-go|github.com/olicesx/quic-go|g' luci-app-daed/daed/Makefile
+
+sed -i 's|/run/i\\  procd_set_param|/procd_set_param command/i \\\tprocd_set_param|g' luci-app-daed/luci-app-daed/root/etc/init.d/luci_daed
+#cat luci-app-daed/daed/Makefile
