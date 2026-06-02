@@ -25,5 +25,5 @@ Scripts——自定义脚本
 Config——自定义配置
 
 # 修改 (自用)
-Update Settings.sh GHNERCH* 2026/5/5 15:01
 [开启内核eBPF](https://github.com/GHNERCH/OpenWRT-CI)
+Refactor WRT-CORE workflow with updated syntax GHNERCH* 2026/5/25 16:57
