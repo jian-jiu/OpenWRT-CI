@@ -25,5 +25,11 @@ Scripts——自定义脚本
 Config——自定义配置
 
 # 修改 (自用)
+## ebpf
 [开启内核eBPF](https://github.com/GHNERCH/OpenWRT-CI)
 Refactor WRT-CORE workflow with updated syntax GHNERCH* 2026/5/25 16:57
+
+## daed
+使用 olicesx/dae 的daed 有流量统计功能
+https://github.com/darkrain88/daed-immWRT-CI-david
+Update IPQ60XX-NOWIFI.txt darkrain88* 2026/5/29 16:08
