@@ -93,7 +93,7 @@ UPDATE_PACKAGE "luci-app-wechatpush" "tty228/luci-app-wechatpush" "master"
 UPDATE_PACKAGE "luci-app-lucky" "sirpdboy/luci-app-lucky" "main"
 UPDATE_PACKAGE "luci-app-lanspeed" "qimaoww/luci-app-lanspeed" "master"
 UPDATE_PACKAGE "destan19" "destan19/OpenAppFilter" "master" "" "luci-app-oaf oaf open-app-filter"
-UPDATE_PACKAGE "Lienol" "Lienol/openwrt-package" "main" "" "luci-app-fileassistant"
+#UPDATE_PACKAGE "Lienol" "Lienol/openwrt-package" "main" "" "luci-app-fileassistant"
 
 #更新软件包版本
 UPDATE_VERSION() {

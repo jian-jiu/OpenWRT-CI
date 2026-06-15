@@ -21,7 +21,8 @@ CONFIG_PACKAGE_oaf=y
 CONFIG_PACKAGE_open-app-filter=y
 CONFIG_PACKAGE_luci-app-oaf=y
 
-CONFIG_PACKAGE_luci-app-fileassistant=y
+## 这个单独占用 NAS 菜单不是很喜欢
+# CONFIG_PACKAGE_luci-app-fileassistant=y
 
 #科学插件调整
 # CONFIG_PACKAGE_luci-app-dae=y
