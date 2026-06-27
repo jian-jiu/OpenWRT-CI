@@ -41,7 +41,7 @@ PKG_PATH="$GITHUB_WORKSPACE/wrt/package/"
 #
 ## tb 的
 ##	sed -i "s/nav_submenu_type '.*'/nav_submenu_type 'boxed-dropdown'/g" $(find ./root/ -type f -name "*aurora")
-#	sed -i "s/nav_submenu_type '.*'/nav_submenu_type 'boxed-dropdown'/g" $(find ./root/usr/share/aurora/ -type f -name "*.template")
+#	sed -i "s/nav_type '.*'/nav_type 'dropdown'/g" $(find ./root/usr/share/aurora/ -type f -name "*.template")
 #
 #	cd $PKG_PATH && echo "theme-aurora has been fixed!"
 #fi
