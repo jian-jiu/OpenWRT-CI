@@ -28,7 +28,7 @@ CONFIG_PACKAGE_luci-app-oaf=y
 # CONFIG_PACKAGE_luci-app-dae=y
 CONFIG_PACKAGE_luci-app-daed=y
 # CONFIG_PACKAGE_luci-app-homeproxy=y
-CONFIG_PACKAGE_luci-app-openclash=y
+## CONFIG_PACKAGE_luci-app-openclash=y
 #增加插件
 
 # 错误 python3-email python3-pkg-resources
