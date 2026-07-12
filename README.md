@@ -21,7 +21,7 @@ Config——自定义配置
 ## ebpf
 [开启内核eBPF](https://github.com/GHNERCH/OpenWRT-CI)
 最后同步:
-Refactor WRT-CORE workflow with updated syntax GHNERCH* 2026/5/25 16:57
+Update WRT-CORE.yml GHNERCH* 07-12 02:41
 
 ## daed
 使用 olicesx/dae 的daed 有流量统计功能
