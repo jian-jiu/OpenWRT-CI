@@ -48,26 +48,26 @@ CONFIG_ATH11K_MEM_PROFILE_512M=y
 CONFIG_PACKAGE_sqm-scripts-nss=y
 CONFIG_PACKAGE_kmod-qca-nss-crypto=y
 
-# # =========================================================
-# # Daed / eBPF / BTF
-# # =========================================================
+# =========================================================
+# Daed / eBPF / BTF
+# =========================================================
 
-# CONFIG_KERNEL_BPF=y
-# CONFIG_KERNEL_BPF_SYSCALL=y
+CONFIG_KERNEL_BPF=y
+CONFIG_KERNEL_BPF_SYSCALL=y
 
-# # Cgroup v2 完整支持（daed pname routing 必需）
-# CONFIG_KERNEL_CGROUP_CPUACCT=y
-# CONFIG_KERNEL_CGROUP_PIDS=y
-# CONFIG_KERNEL_MEMCG=y
+# Cgroup v2 完整支持（daed pname routing 必需）
+CONFIG_KERNEL_CGROUP_CPUACCT=y
+CONFIG_KERNEL_CGROUP_PIDS=y
+CONFIG_KERNEL_MEMCG=y
 
-# CONFIG_KERNEL_BPF_JIT=y
-# CONFIG_KERNEL_BPF_JIT_ALWAYS_ON=y
+CONFIG_KERNEL_BPF_JIT=y
+CONFIG_KERNEL_BPF_JIT_ALWAYS_ON=y
 
-# # =========================================================
-# # eBPF runtime
-# # =========================================================
+# =========================================================
+# eBPF runtime
+# =========================================================
 
-# CONFIG_PACKAGE_bpftool=y
+CONFIG_PACKAGE_bpftool=y
 
-# CONFIG_PACKAGE_kmod-sched-bpf=y
-# CONFIG_PACKAGE_kmod-sched-cake=y
+CONFIG_PACKAGE_kmod-sched-bpf=y
+CONFIG_PACKAGE_kmod-sched-cake=y
