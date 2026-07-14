@@ -89,7 +89,7 @@ UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 
 #UPDATE_PACKAGE "luci-app-dae" "QiuSimons/luci-app-dae" "kix"
 #UPDATE_PACKAGE "luci-app-daed" "QiuSimons/luci-app-daed" "kix"
-UPDATE_PACKAGE "luci-app-daed" "kenzok8/openwrt-daede" "main"
+UPDATE_PACKAGE "luci-app-daede" "kenzok8/openwrt-daede" "main"
 #UPDATE_PACKAGE "luci-app-daed" "breeze303/luci-app-daed" "kix"
 #UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
 UPDATE_PACKAGE "luci-app-wechatpush" "tty228/luci-app-wechatpush" "master"
