@@ -39,9 +39,7 @@ PKG_PATH="$GITHUB_WORKSPACE/wrt/package/"
 #if [ -d *"luci-app-aurora-config"* ]; then
 #	echo " " && cd ./luci-app-aurora-config/
 #
-## tb 的
-##	sed -i "s/nav_submenu_type '.*'/nav_submenu_type 'boxed-dropdown'/g" $(find ./root/ -type f -name "*aurora")
-#	sed -i "s/nav_type '.*'/nav_type 'dropdown'/g" $(find ./root/usr/share/aurora/ -type f -name "*.template")
+#	sed -i "s/nav_type '.*'/nav_type 'dropdown'/g; s/struct_radius_base '.*'/struct_radius_base '0.125rem'/g" $(find ./root/usr/share/aurora/ -type f -name "*.template")
 #
 #	cd $PKG_PATH && echo "theme-aurora has been fixed!"
 #fi
