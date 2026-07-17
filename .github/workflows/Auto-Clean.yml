@@ -5,10 +5,10 @@ name: Auto-Clean
 
 on:
   #自动编译：当cache-Clean运行完成后
-#  workflow_run:
-#    workflows: ["Cache-Clean"]
-#    types:
-#      - completed
+  workflow_run:
+    workflows: ["Cache-Clean"]
+    types:
+      - completed
   #手动清理
   workflow_dispatch:
     inputs:
