@@ -32,9 +32,6 @@ sed -i "s/192\.168\.[0-9]*\.[0-9]*/$WRT_IP/g" $CFG_FILE
 #修改默认主机名
 sed -i "s/hostname='.*'/hostname='$WRT_NAME'/g" $CFG_FILE
 
-vlmcsd_patches="./feeds/packages/net/vlmcsd/patches/"
-mkdir -p $vlmcsd_patches && cp -f ../patches/001-fix_compile_with_ccache.patch $vlmcsd_patches
-
 sed -i 's/mirrors.vsean.net\/openwrt/mirror.nju.edu.cn\/immortalwrt/g' ./package/emortal/default-settings/files/99-default-settings-chinese
 
 #配置文件修改
@@ -58,18 +55,27 @@ if [[ "${WRT_CONFIG,,}" == *"wifi"* && "${WRT_CONFIG,,}" == *"no"* ]]; then
 fi
 
 #高通平台调整
-DTS_PATH="./target/linux/qualcommax/dts/"
+DTS_PATH=""
+for path in \
+	"./target/linux/qualcommax/files/arch/arm64/boot/dts/qcom" \
+	"./target/linux/qualcommax/dts"; do
+	if [ -d "$path" ]; then
+		DTS_PATH="$path"
+		break
+	fi
+done
+
 if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
   #开启sqm-nss插件
 #  echo "CONFIG_PACKAGE_luci-app-sqm=y" >> ./.config
 #  echo "CONFIG_PACKAGE_sqm-scripts-nss=y" >> ./.config
 	#无WIFI配置调整Q6大小
 	if [[ "${WRT_CONFIG,,}" == *"wifi"* && "${WRT_CONFIG,,}" == *"no"* ]]; then
-		find $DTS_PATH -type f ! -iname '*nowifi*' -exec sed -i 's/ipq\(6018\|8074\).dtsi/ipq\1-nowifi.dtsi/g' {} +
-		echo "qualcommax set up nowifi successfully!"
+		if [ -n "$DTS_PATH" ]; then
+			find "$DTS_PATH" -type f ! -iname '*nowifi*' -exec sed -i 's/ipq\(6018\|8074\).dtsi/ipq\1-nowifi.dtsi/g' {} +
+			echo "qualcommax set up nowifi successfully!"
+		else
+			echo "qualcommax DTS directory not found, skip nowifi adjustment."
+		fi
 	fi
 fi
-
-#亚瑟修复USB2.0日志报错问题
-wget -qO - https://github.com/davidtall/immortalwrt/commit/ce39feb4.patch | patch -p1
-cat ./target/linux/qualcommax/dts/ipq6000-re-ss-01.dts
