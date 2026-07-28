@@ -21,10 +21,10 @@ Config——自定义配置
 ## ebpf
 [开启内核eBPF](https://github.com/GHNERCH/OpenWRT-CI)
 最后同步:
-Update WRT-CORE.yml GHNERCH* 07-12 02:41
+Update Packages.sh GHNERCH* 2026/7/22 10:12
 
 ## daed
 使用 olicesx/dae 的daed 有流量统计功能
 https://github.com/darkrain88/daed-immWRT-CI-david
 最后同步:
-Update GENERAL.txt darkrain88* 2026/6/13 12:20
+Update viking package dependencies darkrain88* 2026/7/22 13:30
