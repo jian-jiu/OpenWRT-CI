@@ -28,6 +28,8 @@ CONFIG_PACKAGE_luci-app-oaf=y
 # CONFIG_PACKAGE_luci-app-dae=y
 # CONFIG_PACKAGE_luci-app-daed=y
 CONFIG_PACKAGE_luci-app-daede=y
+CONFIG_PACKAGE_luci-app-daede_daed=y
+# CONFIG_PACKAGE_luci-app-daede_dae is not set
 # CONFIG_PACKAGE_luci-app-homeproxy=y
 ## CONFIG_PACKAGE_luci-app-openclash=y
 #增加插件

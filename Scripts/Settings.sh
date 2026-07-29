@@ -34,6 +34,21 @@ sed -i "s/hostname='.*'/hostname='$WRT_NAME'/g" $CFG_FILE
 
 sed -i 's/mirrors.vsean.net\/openwrt/mirror.nju.edu.cn\/immortalwrt/g' ./package/emortal/default-settings/files/99-default-settings-chinese
 
+#仅使用80端口，不启用HTTPS重定向
+mkdir -p ./files/etc/config
+cat > ./files/etc/config/nginx <<'EOF'
+config main 'global'
+	option uci_enable 'true'
+
+config server '_lan'
+	list listen '80 default_server'
+	list listen '[::]:80 default_server'
+	option server_name '_lan'
+	list include 'restrict_locally'
+	list include 'conf.d/*.locations'
+	option access_log 'off; # logd openwrt'
+EOF
+
 #配置文件修改
 echo "CONFIG_PACKAGE_luci-theme-$WRT_THEME=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-app-$WRT_THEME-config=y" >> ./.config

@@ -24,7 +24,14 @@ Config——自定义配置
 Update Packages.sh GHNERCH* 2026/7/22 10:12
 
 ## daed
+固件内置 [kenzok8/openwrt-daede](https://github.com/kenzok8/openwrt-daede) `main` 分支的
+`daed` 和 `luci-app-daede`，使用带流量统计的新版核心。
+最后同步:
+kenzok8/openwrt-daede main 2026/7/29
+
+### 同步
 使用 olicesx/dae 的daed 有流量统计功能
 https://github.com/darkrain88/daed-immWRT-CI-david
 最后同步:
 Update viking package dependencies darkrain88* 2026/7/22 13:30
+

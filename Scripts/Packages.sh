@@ -87,7 +87,17 @@ UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 
 #UPDATE_PACKAGE "luci-app-dae" "QiuSimons/luci-app-dae" "kix"
 #UPDATE_PACKAGE "luci-app-daed" "QiuSimons/luci-app-daed" "kix"
-UPDATE_PACKAGE "luci-app-daede" "kenzok8/openwrt-daede" "main"
+# 同时移除 feeds 中的旧核心，避免其 daed/dae Makefile 覆盖此仓库的新版。
+UPDATE_PACKAGE "luci-app-daede" "kenzok8/openwrt-daede" "main" "" "dae daed luci-app-daed vmlinux-btf"
+
+echo "openwrt-daede package versions:"
+for PKG_FILE in openwrt-daede/{dae,daed,luci-app-daede}/Makefile; do
+	if [ ! -f "$PKG_FILE" ]; then
+		echo "Missing package Makefile: $PKG_FILE"
+		exit 1
+	fi
+	grep -H -E '^PKG_(VERSION|RELEASE):=' "$PKG_FILE"
+done
 #UPDATE_PACKAGE "luci-app-daed" "breeze303/luci-app-daed" "kix"
 #UPDATE_PACKAGE "luci-app-pushbot" "zzsj0928/luci-app-pushbot" "master"
 UPDATE_PACKAGE "luci-app-wechatpush" "tty228/luci-app-wechatpush" "master"
