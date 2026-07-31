@@ -104,6 +104,23 @@ UPDATE_PACKAGE "luci-app-wechatpush" "tty228/luci-app-wechatpush" "master"
 #UPDATE_PACKAGE "luci-app-lucky" "sirpdboy/luci-app-lucky" "main"
 #UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main"
 UPDATE_PACKAGE "luci-app-lucky" "whzhni1/luci-app-lucky" "main"
+
+# 新安装默认从 Lucky 官网下载最新 Beta 核心，并继续由插件自动匹配目标架构。
+LUCKY_CONFIG="luci-app-lucky/luci-app-lucky/root/etc/config/lucky"
+if [ ! -f "$LUCKY_CONFIG" ]; then
+	echo "Missing Lucky config: $LUCKY_CONFIG"
+	exit 1
+fi
+
+sed -i \
+	-e "s/option mirror        'github'/option mirror        'r66666'/" \
+	-e "s/option release_type  'stable'/option release_type  'beta'/" \
+	"$LUCKY_CONFIG"
+
+grep -q "option mirror        'r66666'" "$LUCKY_CONFIG" \
+	&& grep -q "option release_type  'beta'" "$LUCKY_CONFIG" \
+	|| { echo "Failed to configure Lucky Beta defaults"; exit 1; }
+
 UPDATE_PACKAGE "luci-app-lanspeed" "qimaoww/luci-app-lanspeed" "master"
 UPDATE_PACKAGE "destan19" "destan19/OpenAppFilter" "master" "" "luci-app-oaf oaf open-app-filter"
 #UPDATE_PACKAGE "Lienol" "Lienol/openwrt-package" "main" "" "luci-app-fileassistant"
