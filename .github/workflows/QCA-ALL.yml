@@ -37,7 +37,7 @@ jobs:
       matrix:
         CONFIG: [IPQ60XX-WIFI-YES]
         SOURCE: [VIKINGYFY/immortalwrt]
-        BRANCH: [owrt]
+        BRANCH: [main]
 
 #        SOURCE: [LiBwrt/LibWrt]
 #        BRANCH: [25.12-nss]
