@@ -27,9 +27,9 @@ Config——自定义配置
 
 # 修改 (自用)
 ## ebpf
-[开启内核eBPF](https://github.com/GHNERCH/OpenWRT-CI)
+[开启内核eBPF(tb)](https://github.com/GHNERCH/OpenWRT-CI)
 最后同步:
-Update Packages.sh GHNERCH* 2026/7/22 10:12
+Fix formatting and improve README content GHNERCH* 2026/8/17 15:32
 
 ## daed
 固件内置 [kenzok8/openwrt-daede](https://github.com/kenzok8/openwrt-daede) `main` 分支的
@@ -39,7 +39,6 @@ kenzok8/openwrt-daede main 2026/7/29
 
 ### 同步
 使用 olicesx/dae 的daed 有流量统计功能
-https://github.com/darkrain88/daed-immWRT-CI-david
+(daed)https://github.com/darkrain88/daed-immWRT-CI-david
 最后同步:
-Update viking package dependencies darkrain88* 2026/7/22 13:30
-
+Modify plugin configurations in GENERAL.txt darkrain88* 2026/8/23 22:17
