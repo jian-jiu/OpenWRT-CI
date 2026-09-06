@@ -9,7 +9,7 @@ else
 fi
 
 #预置HomeProxy数据
-#HP_DIR="$(find "$PKG_PATH" -maxdepth 1 -type d -name '*homeproxy*' -print -quit)"
+#HP_DIR="$(find "$PKG_PATH" -maxdepth 3 -type d -iname '*homeproxy*' -print -quit 2>/dev/null)"
 #if [ -n "$HP_DIR" ]; then
 #	echo " "
 #

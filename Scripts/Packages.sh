@@ -59,8 +59,6 @@ UPDATE_PACKAGE() {
 ## UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
 #UPDATE_PACKAGE "passwall" "Openwrt-Passwall/openwrt-passwall" "main" "pkg"
 #UPDATE_PACKAGE "passwall2" "Openwrt-Passwall/openwrt-passwall2" "main" "pkg"
-#UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
-#UPDATE_PACKAGE "athena-led" "unraveloop/JDC-AX6600-Athena-LED-Controller" "main"
 #UPDATE_PACKAGE "ddns-go" "sirpdboy/luci-app-ddns-go" "main"
 # 同库不同作者
 UPDATE_PACKAGE "diskman" "lisaac/luci-app-diskman" "master"
@@ -125,6 +123,10 @@ grep -q "option mirror        'r66666'" "$LUCKY_CONFIG" \
 UPDATE_PACKAGE "luci-app-lanspeed" "qimaoww/luci-app-lanspeed" "master"
 UPDATE_PACKAGE "destan19" "destan19/OpenAppFilter" "master" "" "luci-app-oaf oaf open-app-filter"
 #UPDATE_PACKAGE "Lienol" "Lienol/openwrt-package" "main" "" "luci-app-fileassistant"
+
+UPDATE_PACKAGE "airpi3000m" "LianXia233/luci-app-airpi3000m-fancontrol" "main"
+UPDATE_PACKAGE "h5000m" "LianXia233/luci-app-h5000m-netmode" "main"
+UPDATE_PACKAGE "qmodem-generic" "LianXia233/luci-app-qmodem-generic" "main"
 
 #更新软件包版本
 UPDATE_VERSION() {
