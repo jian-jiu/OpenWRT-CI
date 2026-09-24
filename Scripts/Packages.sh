@@ -120,34 +120,6 @@ UPDATE_PACKAGE "luci-app-lucky" "whzhni1/luci-app-lucky" "main"
 UPDATE_PACKAGE "luci-app-daede" "kenzok8/openwrt-daede" "main" "" "dae daed luci-app-daed vmlinux-btf"
 #UPDATE_PACKAGE "luci-app-daed" "breeze303/luci-app-daed" "kix"
 
-
-## daed 处理
-echo "openwrt-daede package versions:"
-for PKG_FILE in openwrt-daede/{dae,daed,luci-app-daede}/Makefile; do
-	if [ ! -f "$PKG_FILE" ]; then
-		echo "Missing package Makefile: $PKG_FILE"
-		exit 1
-	fi
-	grep -H -E '^PKG_(VERSION|RELEASE):=' "$PKG_FILE"
-done
-
-
-# 新安装默认从 Lucky 官网下载最新 Beta 核心，并继续由插件自动匹配目标架构。
-LUCKY_CONFIG="luci-app-lucky/luci-app-lucky/root/etc/config/lucky"
-if [ ! -f "$LUCKY_CONFIG" ]; then
-	echo "Missing Lucky config: $LUCKY_CONFIG"
-	exit 1
-fi
-
-sed -i \
-	-e "s/option mirror        'github'/option mirror        'r66666'/" \
-	-e "s/option release_type  'stable'/option release_type  'beta'/" \
-	"$LUCKY_CONFIG"
-
-grep -q "option mirror        'r66666'" "$LUCKY_CONFIG" \
-	&& grep -q "option release_type  'beta'" "$LUCKY_CONFIG" \
-	|| { echo "Failed to configure Lucky Beta defaults"; exit 1; }
-
 #################### ----- 自定义 end ---------- ####################
 
 #更新软件包版本

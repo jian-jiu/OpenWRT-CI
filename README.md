@@ -4,10 +4,6 @@
 
 [IPQ技术讨论群](https://qm.qq.com/q/v7nMhzB4oU)
 
-# 高质量<付费>中转站
-
-[LiBwrt-Ai](https://api.zipimg.cn/register?aff=LR7FSZ2ZZ4D3)
-
 # 本地编译器
 https://github.com/VIKINGYFY/OWRT-Tools.git
 
@@ -37,16 +33,16 @@ Config——自定义配置
 ### daed
 使用 olicesx/dae 的daed 有流量统计功能
 https://github.com/darkrain88/daed-immWRT-CI-david
-最后同步:
-Update README with DaeWRT-CI GitHub link darkrain88* 2026/9/8 08:40
+
+最后同步: Update README with DaeWRT-CI GitHub link darkrain88* 2026/9/8 08:40
 
 ## ebpf
 [开启内核eBPF(tb)](https://github.com/GHNERCH/OpenWRT-CI)
-最后同步:
-Fix formatting and improve README content GHNERCH* 2026/8/17 15:32
+
+最后同步: Fix formatting and improve README content GHNERCH* 2026/8/17 15:32
 
 ## daed ???
 固件内置 [kenzok8/openwrt-daede](https://github.com/kenzok8/openwrt-daede) `main` 分支的
 `daed` 和 `luci-app-daede`，使用带流量统计的新版核心。
-最后同步:
-kenzok8/openwrt-daede main 2026/7/29
+
+最后同步: kenzok8/openwrt-daede main 2026/7/29
